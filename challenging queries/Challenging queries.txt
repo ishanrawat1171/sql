@@ -1,0 +1,19 @@
+
+1) select p.productionid ,p.Productionname, count(m.moviename) from productions as p left join movie as m ON p.productionid = m.productionid group by p.productionid;
+
+2) select p.ownername,p.productionid ,p.Productionname, count(m.moviename) from productions as p left join movie as m ON p.productionid = m.productionid group by p.productionid having count(moviename)>=2;
+3)select p.productionid ,p.Productionname, count(m.moviename) from productions as p left join movie as m ON p.productionid = m.productionid group by p.productionid ORDER BY `productionid` DESC LIMIT 1;
+
+4) select p.productionname ,m.heroname, m.moviename from productions as p left join movie as m ON p.productionid = m.productionid where ownername="Subaskaran";
+
+5)  select m.heroname, m.moviename from productions as p left join movie as m ON p.productionid = m.productionid where mod(p.productionid,100)=82 ;
+      
+6) select p.Ownername ,p.Productionname, count(m.moviename) from productions as p left join movie as m ON p.productionid = m.productionid group by p.productionid Having count(m.moviename)=0 ; 
+       
+7) select p.Ownername ,p.Productionname from  movie as m right join productions as p ON  m.productionid =p.productionid where m.Language!="Hindi" ;
+          
+9) select distinct Heroname ,Language , count(Heroname) as result from  movie group by(Language) order by (result) desc limit 1   ;
+
+10) select Distinct p.Productionname,p.Ownername ,count(p.Productionname) as counter  from  movie as m right join productions as p ON  m.productionid =p.productionid  group by(m.language) order by(counter) desc limit 1;
+
+11) select p.Ownername ,p.Productionname from  movie as m right join productions as p ON  m.productionid =p.productionid where m.moviename is  null ;

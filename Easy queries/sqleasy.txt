@@ -1,0 +1,13 @@
+1)select moviename  from movie where Movietype like "Drama%"; 
+2)select moviename  from movie where Heroname like "Heroname%";
+3)select count(moviename) from movie where Length>18;
+4) select MIN(Length) from movie;
+5) select moviename  from movie where Language like "T%";
+6)  select moviename,Heroname,Heroine,Max(Length) from movie;
+7)select moviename,Heroname,Heroine from movie where Releaseddate = STR_TO_DATE('15-03-2018', '%m-%d-%Y');
+8) select count(moviename) from movie where  Movietype like "thriller%";
+9) select count(moviename) from movie where Releaseddate = STR_TO_DATE('15-03-2018', '%m-%d-%Y');
+10) select Releaseddate from movie where moviename like "Zero%";
+11) select Heroname from movie where Heroine like "Amy%" ;
+12) select count(moviename) from movie where monthname(releaseddate)='October';
+13)select moviename,Productionid  from movie ;
